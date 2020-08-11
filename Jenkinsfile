@@ -11,5 +11,10 @@ pipeline {
                 sh 'mvn -B package'
             }
         }
+        stage('Deploy') {
+            steps {
+                sh 'mvn -B deploy'
+            }
+        }
     }
 }
